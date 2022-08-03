@@ -11,7 +11,7 @@
   <div id="page-container">
     <div id="left">
       <div id="logo">
-        <h1>ODIN</h1>
+        <span><img src="./resources/odin-lined.png" alt="Odin logo"></span><h1>ODIN</h1>
       </div>
     </div>
     <div id="right">
@@ -21,8 +21,21 @@
       </div>
       <div id="form">
         <p>Let's do this!</p>
-        <form>
-
+        <form action="post" id="signup-form">
+          <label for="first_name">First Name</label>
+          <input type="text" id="first_name" name="first_name">
+          <label for="last_name">Last Name</label>
+          <input type="text" id="last_name" name="last_name">
+          <br>
+          <label for="email">E-mail</label>
+          <input type="text" id="email" name="email">
+          <label for="phone">Phone Number</label>
+          <input type="text" id="phone" name="phone">
+          <br>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password">
+          <label for="passwordconf">Confirm Password</label>
+          <input type="password" id="passwordconf" name="passwordconf">
         </form>
       </div>
       <div id="footer">
