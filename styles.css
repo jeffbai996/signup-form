@@ -9,7 +9,7 @@
 
 body {
   margin: 0px 0px 0px 0px;
-  /* overflow: hidden; */
+  overflow: hidden;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: bold;
 }
@@ -17,23 +17,23 @@ body {
 #page-container {
   display: flex;
   margin: 0px;
-
 }
 
 #left {
   flex: 1.1;
   height: 100vh;
   background-image: url(https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
-  /* background-size: cover; */
-  background-repeat: repeat-y;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 #logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 150px;
-  background: rgba(0, 0, 0, 0.5);
+  margin-top: 120px;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 #logo img {
@@ -45,7 +45,7 @@ body {
   font-family: "Norse-Bold";
   font-size: 5em;
   text-align: center;
-  line-height: 20vh;  
+  line-height: 12vh;  
   padding-top: 10px;
 }
 
@@ -55,7 +55,7 @@ body {
   flex: 2;
 }
 
-#hero, #form, #footer {
+#hero, #form-container, #footer {
   flex: 1;
   padding: 2em;
 }
@@ -64,12 +64,15 @@ body {
   background-color: #f6f6f6;
 }
 
+#form-container {
+}
+
 #signup-form {
   display: flex;
   flex-direction: column;
-  row-gap: 1em;
+  row-gap: 1.5em;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: normal;
+  /* font-weight: normal; */
   font-size: 0.5em;
 }
 
@@ -83,7 +86,7 @@ body {
   flex-direction: column;
 }
 
-input {
+#signup-form input {
   width: 150px;
   padding: 0;
   margin: 0;
@@ -98,6 +101,7 @@ input {
 #footer input {
   color: white;
   font-weight: bold;
+  width: 150px;
   border: 1px solid rgba(0,0,0,0);
   border-radius: 5px;
   background-color: #596d48;

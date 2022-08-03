@@ -19,7 +19,7 @@
         <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
         <p>You <em>know</em> you want to.</p>
       </div>
-      <div id="form">
+      <div id="form-container">
         <p>Let's do this!</p>
         <form id="signup-form">
           <div>
@@ -45,17 +45,28 @@
           <div>
             <div>
               <label for="password">PASSWORD</label>
-              <input type="password" id="password" name="password" required>
+              <input type="password" id="password" name="password" oninput="check(this)" required>
             </div>
             <div>
               <label for="passwordconf">CONFIRM PASSWORD</label>
-              <input type="password" id="passwordconf" name="passwordconf" required>
+              <input type="password" id="passwordconf" name="passwordconf" oninput="check(this)" required>
+              <script>
+                function check(input) {
+                    if (document.getElementById('passwordconf').value != document.getElementById('password').value) {
+                        input.setCustomValidity('Passwords must match');
+                    } else {
+                        // input is valid -- reset the error message
+                        input.setCustomValidity('');
+                    }
+                }
+            </script>
             </div>
           </div>
         </form>
+        <p></p>
       </div>
       <div id="footer">
-        <input type="submit" form="signup-form" value="Create Account">
+        <input type="submit" form="signup-form" onclick="matchPassword()" value="Create Account">
         <p>Already have an account? <a href="">Log in</a></p>
       </div>
     </div>
