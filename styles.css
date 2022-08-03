@@ -1,10 +1,16 @@
 * {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 body {
   margin: 0px 0px 0px 0px;
   overflow: hidden;
+}
+
+@font-face {
+  font-family: "Norse-Bold";
+  src: "./resources/Norse-Bold.otf"
+
 }
 
 #page-container {
@@ -17,19 +23,21 @@ body {
   flex: 1.1;
   height: 100vh;
   background-image: url(https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
+  background-size: cover;
 }
 
 #logo {
   margin-top: 150px;
-  background-color: black;
-  opacity: 0.5;
+  background: rgba(0, 0, 0, 0.5)
 }
 
 #logo h1 {
   color: white;
-  opacity: 1;
+  font-family: "Norse-Bold";
+  font-size: 5em;
   text-align: center;
-  line-height: 10vh;  
+  line-height: 25vh;  
+  margin: 0px;
 }
 
 #right {
