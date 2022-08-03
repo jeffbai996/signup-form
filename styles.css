@@ -1,5 +1,5 @@
 * {
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 
 body {
@@ -28,7 +28,7 @@ body {
 
 #logo {
   margin-top: 150px;
-  background: rgba(0, 0, 0, 0.5)
+  background: rgba(0, 0, 0, 0.5);
 }
 
 #logo h1 {
@@ -36,10 +36,16 @@ body {
   font-family: "Norse-Bold";
   font-size: 5em;
   text-align: center;
-  line-height: 25vh;  
-  margin: 0px;
+  line-height: 20vh;  
+  padding-top: 10px;
 }
 
 #right {
+  display: flex;
+  flex-direction: column;
   flex: 2;
+}
+
+#hero, #form, #footer {
+  flex: 1;
 }
